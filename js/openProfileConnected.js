@@ -32,7 +32,7 @@ function handleOpenProfile(event) {
 
   // Contenu de la modal
   const modalContent = document.createElement("div");
-  modalContent.textContent = "Vous n'êtes pas connecté";
+  modalContent.textContent = "Vous êtes connecté bienvenu, ";
   modalContent.classList.add("text-lg", "font-bold", "mb-4");
 
   //   Creation du form et son contenu
@@ -45,45 +45,19 @@ function handleOpenProfile(event) {
     "justify-center",
     "h-[1000px]"
   );
-  const form = divForm.appendChild(document.createElement("form"));
-  form.classList.add("flex", "flex-col", "items-center", "space-y-4");
-  form.setAttribute("method", "POST");
-  form.setAttribute("action", "../process/handleConnect.php");
-  const labelEmail = form.appendChild(document.createElement("label"));
-  labelEmail.setAttribute("for", "email");
-  labelEmail.textContent = "Email";
-  const email = form.appendChild(document.createElement("input"));
-  email.setAttribute("type", "text");
-  email.setAttribute("name", "email");
-  email.setAttribute("placeholder", "email");
+  const profil = divForm.appendChild(document.createElement("a"));
+  profil.setAttribute("href", "profil.php");
+  profil.textContent = "Voir profil";
 
-  const labelPassword = form.appendChild(document.createElement("label"));
-  labelPassword.setAttribute("for", "password");
-  labelPassword.textContent = "Mot de passe";
-  const password = form.appendChild(document.createElement("input"));
-  password.setAttribute("type", "password");
-  password.setAttribute("name", "password");
-  password.setAttribute("placeholder", "password");
+  const disconnect = divForm.appendChild(document.createElement("form"));
+  disconnect.classList.add("flex", "flex-col", "items-center", "space-y-4");
+  disconnect.setAttribute("method", "POST");
+  disconnect.setAttribute("action", "../process/handleLogout.php");
 
-  const submit = form.appendChild(document.createElement("input"));
+  const submit = disconnect.appendChild(document.createElement("input"));
   submit.setAttribute("type", "submit");
-  submit.setAttribute("value", "Se connecter");
+  submit.setAttribute("value", "Se déconnecter");
   submit.classList.add(
-    "bg-green",
-    "text-primary-white",
-    "rounded-lg",
-    "p-2",
-    "cursor-pointer",
-    "hover:bg-primary-white",
-    "hover:text-primary-dark"
-  );
-
-  //   Lien pour s'inscrire
-
-  const inscritption = form.appendChild(document.createElement("a"));
-  inscritption.setAttribute("href", "../pages/inscription.php");
-  inscritption.textContent = "Pas encore inscrit ?";
-  inscritption.classList.add(
     "bg-green",
     "text-primary-white",
     "rounded-lg",

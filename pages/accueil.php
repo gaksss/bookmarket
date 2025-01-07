@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+$isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilisée dans votre session pour stocker l'utilisateur connecté
+?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
@@ -7,14 +12,13 @@
     <title>BookMarket</title>
     <link rel="stylesheet" href="../assets/styles/output.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script defer src="../js/openProfile.js"></script>
+
 
 </head>
 
 <body class="bg-primary-white">
 
     <header class=" bg-primary-dark h-16 font-extrabold sticky top-0 z-20 flex items-center px-6 justify-between w-full md:px-12 md:h-24">
-
         <a href="#" class="flex items-center"><img src="../assets/img/logo.png" alt="Logo de la marque représentant la Terre sur un livre" class="h-12 w-12 md:h-20 md:w-20 filter brightness-200 ">
             <h1 class="text-4xl text-primary-white hidden md:flex">BookMarket</h1>
         </a>
@@ -24,9 +28,24 @@
             <a href="#" id="cart"><i class='bx bx-cart text-4xl text-primary-white md:text-6xl'></i></a>
             <a href="#" id="search"><i class='bx bx-search-alt-2 text-4xl text-primary-white md:text-6xl'></i></a>
             <a href="#" id="profil"><i class='bx bx-user text-4xl text-primary-white md:text-6xl'></i></a>
+
+
+            <?php if (isset($_SESSION['user'])) {
+            ?>
+                <script src="../js/openProfileConnected.js"></script>
+            <?php
+            } else {
+            ?>
+                <script src="../js/openProfile.js"></script>
+            <?php
+            }
+            ?>
+
+            </form>
         </nav>
     </header>
     <main>
+        
         <section id="bestSeller" class="flex flex-col items-center mt-6">
             <h2 class="text-4xl md:text-6xl lg:text-7xl font-semibold mb-24 text-primary-dark">Best Seller</h2>
             <article class="flex w-full justify-evenly">
@@ -222,6 +241,11 @@
         </footer>
     </main>
 
+
+    <script>
+        sessionPhp = <?php echo json_encode($_SESSION); ?>;
+        console.log(sessionPhp)
+    </script>
 </body>
 
 </html>
