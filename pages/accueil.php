@@ -38,7 +38,7 @@
                     <div class="pb-2 px-2 lg:pb-5 lg:px-5">
                         <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
                         <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                        
+
                     </div>
                 </div>
                 <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
@@ -91,98 +91,134 @@
         <section class="bg-primary-dark flex flex-col items-center mt-36 pb-16">
             <h2 class="text-4xl md:text-6xl lg:text-7xl font-semibold mt-6 mb-24 text-primary-white">Nouveautés</h2>
             <article class="grid grid-cols-2 gap-10 md:grid-cols-3 items-center justify-center md:gap-24">
-            <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
 
-                <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                    <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    </div>
+                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
+                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                    </div>
                 </div>
-                <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                    <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                    <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+
+                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    </div>
+                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
+                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
 
-<div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-    <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-</div>
-<div class="pb-2 px-2 lg:pb-5 lg:px-5">
-    <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-    <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-</div>
-</div>
-<div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    </div>
+                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
+                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                    </div>
+                </div>
+                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
 
-<div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-    <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-</div>
-<div class="pb-2 px-2 lg:pb-5 lg:px-5">
-    <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-    <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-</div>
-</div>
-<div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    </div>
+                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
+                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                    </div>
+                </div>
+                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
 
-<div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-    <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-</div>
-<div class="pb-2 px-2 lg:pb-5 lg:px-5">
-    <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-    <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-</div>
-</div>
-<div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    </div>
+                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
+                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                    </div>
+                </div>
+                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
 
-<div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-    <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-</div>
-<div class="pb-2 px-2 lg:pb-5 lg:px-5">
-    <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-    <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-</div>
-</div>
-<div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    </div>
+                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
+                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                    </div>
+                </div>
+                <div class="bg-green hidden w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white md:flex flex-col justify-end ">
 
-<div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-    <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-</div>
-<div class="pb-2 px-2 lg:pb-5 lg:px-5">
-    <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-    <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-</div>
-</div>
-<div class="bg-green hidden w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white md:flex flex-col justify-end ">
+                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    </div>
+                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
+                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                    </div>
+                </div>
+                <div class="bg-green hidden w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white md:flex flex-col justify-end ">
 
-<div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-    <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-</div>
-<div class="pb-2 px-2 lg:pb-5 lg:px-5">
-    <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-    <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-</div>
-</div>
-<div class="bg-green hidden w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white md:flex flex-col justify-end ">
+                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    </div>
+                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
+                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                    </div>
+                </div>
+                <div class="bg-green hidden w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white md:flex flex-col justify-end ">
 
-<div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-    <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-</div>
-<div class="pb-2 px-2 lg:pb-5 lg:px-5">
-    <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-    <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-</div>
-</div>
-<div class="bg-green hidden w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white md:flex flex-col justify-end ">
-
-<div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-    <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-</div>
-<div class="pb-2 px-2 lg:pb-5 lg:px-5">
-    <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-    <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-</div>
-</div>
-</article>
+                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                    </div>
+                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
+                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
+                    </div>
+                </div>
+            </article>
         </section>
+        <footer>
+            <section class="bg-primary-white flex flex-col items-center mt-20 pb-16">
+                <article id="links" class="grid grid-cols-3 gap-5 md:gap-0 justify-between w-[70%]">
+                    <div class="flex flex-col items-center text-center">
+                        <h4 class="text-lg md:text-xl font-semibold mb-5">BookMarket</h4>
+                        <a href="#" class="underline hover:text-xl hover:text-green">
+                            <p class="text-md md:text-lg hover:text-xl">Nous contacter</p>
+                        </a>
+                    </div>
+                    <div class="flex flex-col items-center text-center gap-3">
+                        <h4 class="text-lg md:text-xl font-semibold mb-5">Liens rapides</h4>
+                        <a href="#" class="underline hover:text-xl hover:text-green">
+                            <p class="text-md md:text-lg hover:text-xl">FAQ</p>
+                        </a>
+                        <a href="#" class="underline hover:text-xl hover:text-green">
+                            <p class="text-md md:text-lg hover:text-xl">Qui sommes-nous?</p>
+                        </a>
+                        <a href="#" class="underline hover:text-xl hover:text-green">
+                            <p class="text-md md:text-lg hover:text-xl">Protection des données</p>
+                        </a>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <h4 class="text-lg md:text-xl font-semibold mb-5">Informations générales</h4>
+                        <a href="#" class="underline  hover:text-green">
+                            <p class="text-md md:text-lg hover:text-xl">Informations de livraisons</p>
+                    </div>
+                </article>
+                <article id="socials" class="mt-10">
+                    <div class="flex">
+                        <a href="#" class="mr-5"><i class='bx bxl-facebook text-4xl text-primary-dark hover:text-green'></i></a>
+                        <a href="#" class="mr-5"><i class='bx bxl-twitter text-4xl text-primary-dark hover:text-green'></i></a>
+                        <a href="#"><i class='bx bxl-instagram text-4xl text-primary-dark hover:text-green'></i></a>
+                    </div>
+                </article>
+            </section>
+        </footer>
     </main>
 
 </body>
