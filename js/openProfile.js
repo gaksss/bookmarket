@@ -34,6 +34,8 @@ function handleOpenProfile(event) {
   const modalContent = document.createElement("div");
   modalContent.textContent = "Vous n'êtes pas connecté";
   modalContent.classList.add("text-lg", "font-bold", "mb-4");
+
+//   Creation du form et son contenu
   const divForm = modalContent.appendChild(document.createElement("div"));
   divForm.classList.add(
     "flex",
@@ -46,7 +48,7 @@ function handleOpenProfile(event) {
   const form = divForm.appendChild(document.createElement("form"));
   form.classList.add("flex", "flex-col", "items-center", "space-y-4");
   form.setAttribute("method", "POST");
-  form.setAttribute("action", "../process/connect.php");
+  form.setAttribute("action", "../process/handleConnect.php");
   const labelEmail = form.appendChild(document.createElement("label"));
   labelEmail.setAttribute("for", "email");
   labelEmail.textContent = "Email";
@@ -75,6 +77,13 @@ function handleOpenProfile(event) {
     "hover:bg-primary-white",
     "hover:text-primary-dark"
   );
+
+//   Lien pour s'inscrire 
+
+const inscritption = form.appendChild(document.createElement("a"));
+inscritption.setAttribute("href", "../pages/inscription.php");
+inscritption.textContent = "Pas encore inscrit ?";
+inscritption.classList.add("bg-green", "text-primary-white", "rounded-lg", "p-2", "cursor-pointer", "hover:bg-primary-white", "hover:text-primary-dark");
 
   // Bouton de fermeture
   const closeButton = document.createElement("i");
