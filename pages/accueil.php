@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,13 @@
     <title>BookMarket</title>
     <link rel="stylesheet" href="../assets/styles/output.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <script defer src="../js/openProfile.js"></script>
 
 </head>
 
-<body class="bg-primary-white scrollbar-hide">
-    <header class=" bg-primary-dark h-16 font-extrabold flex items-center px-6 justify-between w-full md:px-12 md:h-24">
+<body class="bg-primary-white">
+
+    <header class=" bg-primary-dark h-16 font-extrabold sticky top-0 z-20 flex items-center px-6 justify-between w-full md:px-12 md:h-24">
 
         <a href="#" class="flex items-center"><img src="../assets/img/logo.png" alt="Logo de la marque représentant la Terre sur un livre" class="h-12 w-12 md:h-20 md:w-20 filter brightness-200 ">
             <h1 class="text-4xl text-primary-white hidden md:flex">BookMarket</h1>
@@ -20,9 +21,9 @@
 
         <nav class="flex justify-evenly w-[150px] md:w-[250px] lg:w-[300px]">
 
-            <a href="#"><i class='bx bx-cart text-4xl text-primary-white md:text-6xl'></i></a>
-            <a href="#"><i class='bx bx-search-alt-2 text-4xl text-primary-white md:text-6xl'></i></a>
-            <a href="#"><i class='bx bx-user text-4xl text-primary-white md:text-6xl'></i></a>
+            <a href="#" id="cart"><i class='bx bx-cart text-4xl text-primary-white md:text-6xl'></i></a>
+            <a href="#" id="search"><i class='bx bx-search-alt-2 text-4xl text-primary-white md:text-6xl'></i></a>
+            <a href="#" id="profil"><i class='bx bx-user text-4xl text-primary-white md:text-6xl'></i></a>
         </nav>
     </header>
     <main>
