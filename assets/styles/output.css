@@ -654,6 +654,14 @@ video {
   margin-top: 1.5rem;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -704,6 +712,10 @@ video {
 
 .h-\[400px\] {
   height: 400px;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
 }
 
 .w-12 {
@@ -774,8 +786,16 @@ video {
   flex-direction: column;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-end {
@@ -825,6 +845,14 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.self-center {
+  align-self: center;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -852,6 +880,14 @@ video {
 
 .rounded-br-sm {
   border-bottom-right-radius: 0.125rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .bg-green {
@@ -925,6 +961,16 @@ video {
   padding-right: 0.75rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -965,6 +1011,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -1013,6 +1064,11 @@ video {
   background-color: rgb(240 237 238 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-primary-dark:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-xl:hover {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1055,6 +1111,14 @@ video {
     right: 0.5rem;
   }
 
+  .md\:left-2 {
+    left: 0.5rem;
+  }
+
+  .md\:top-0 {
+    top: 0px;
+  }
+
   .md\:mt-24 {
     margin-top: 6rem;
   }
@@ -1093,6 +1157,10 @@ video {
 
   .md\:h-\[30px\] {
     height: 30px;
+  }
+
+  .md\:h-\[100vh\] {
+    height: 100vh;
   }
 
   .md\:w-20 {
@@ -1134,6 +1202,16 @@ video {
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .md\:text-6xl {

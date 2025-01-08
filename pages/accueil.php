@@ -48,37 +48,44 @@ $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilis
         </nav>
     </header>
     <main>
-        <section id="modal" class="fixed hidden inset-0 bg-primary-dark bg-opacity-50 flex justify-center items-center z-50">
-            <div class="bg-red rounded-lg shadow-lg w-[300px] h-[400px] p-6 relative flex flex-col md:w-[1000px] md:h-[1000px]">
-                <article class="hidden" id="connexion">
 
-                    <h4 class="text-md font-bold mb-4 md:text-lg text-primary-white">Vous n'êtes pas connecté</h4>
-                    <div class="flex flex-col items-center space-y-4 justify-center h-[300px] md:h-[1000px]">
-                        <form class="flex flex-col items-center space-y-4" action="../process/handleConnect.php" method="post">
-                            <label class="md:text-2xl md:font-semibold text-primary-white" for="email">Email</label>
-                            <input class="md:w-[300px] md:h-[30px] px-3 rounded-sm" type="email" name="email" id="email" placeholder="Votre email">
-                            <label class="md:text-2xl md:font-semibold text-primary-white" for="password">Mot de passe</label>
-                            <input class="md:w-[300px] md:h-[30px] px-3" type="password" name="password" id="password" placeholder="Votre mot de passe">
-                            <input type="submit" value="Se connecter" class="bg-green text-primary-white rounded-lg p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark">
-                        </form>
-                        <a class="bg-green text-primary-white rounded-lg p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark" href="../pages/inscription.php">Pas encore inscrit?</a>
-                        <i id="close" class="absolute top-1 right-1 md:top-2 md:right-2 text-primary-dark hover:text-primary-white focus:outline-none font-bold bx bx-x text-3xl md:text-5xl cursor-pointer"></i>
+        <section>
+            <article class="hidden" id="connexion">
+                <div id="modalConnexion" class="fixed hidden inset-0 bg-primary-dark bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="bg-red rounded-lg shadow-lg w-[300px] h-[400px] p-6 relative flex flex-col md:w-[1000px] md:h-[1000px]">
+                        <h4 class="text-md font-bold mb-4 md:text-lg text-primary-white">Vous n'êtes pas connecté</h4>
+                        <div class="flex flex-col items-center space-y-4 justify-center h-[300px] md:h-[1000px]">
+                            <form class="flex flex-col items-center space-y-4" action="../process/handleConnect.php" method="post">
+                                <label class="md:text-2xl md:font-semibold text-primary-white" for="email">Email</label>
+                                <input class="md:w-[300px] md:h-[30px] px-3 rounded-sm" type="email" name="email" id="email" placeholder="Votre email">
+                                <label class="md:text-2xl md:font-semibold text-primary-white" for="password">Mot de passe</label>
+                                <input class="md:w-[300px] md:h-[30px] px-3" type="password" name="password" id="password" placeholder="Votre mot de passe">
+                                <input type="submit" value="Se connecter" class="bg-green text-primary-white rounded-lg p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark">
+                            </form>
+                            <a class="bg-green text-primary-white rounded-lg p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark" href="../pages/inscription.php">Pas encore inscrit?</a>
+                            <i id="close" class="absolute top-1 right-1 md:top-2 md:right-2 text-primary-dark hover:text-primary-white focus:outline-none font-bold bx bx-x text-3xl md:text-5xl cursor-pointer"></i>
+                        </div>
                     </div>
+                </div>
+            </article>
+            <article class="hidden" id="connected">
+                <div id="modalConnected" class="fixed hidden  inset-0 bg-primary-dark bg-opacity-50 flex justify-end items-center z-50">
+                    <div class="bg-red shadow-lg w-[300px] h-[100vh] py-6 relative flex flex-col md:w-[300px] md:h-[100vh]">
+                        <h4 class="text-md px-6 font-bold mb-4 md:text-xl text-primary-white">Vous êtes connecté bienvenue <?php echo $user['firstname'] . " " . $user['lastname'] ?></h4>
+                        <div class="flex flex-col items-start space-y-4 justify-start h-[300px] md:h-[1000px]">
+                            <a class="bg-green text-center w-full text-primary-white  p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark md:text-xl md:px-4 md:py-4" href="./profil.php">Voir profil</a>
+                            <form class="flex flex-col items-center space-y-4 w-full" action="../process/handleLogout.php" method="post">
+                                <input class="bg-green w-full text-primary-white  p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark md:text-xl md:px-4 md:py-4" type="submit" value="Se déconnecter">
 
-                </article>
-                <article class="hidden" id="connected">
-                    <h4 class="text-md font-bold mb-4 md:text-lg text-primary-white">Vous êtes connecté bienvenu <?php echo $user['firstname'] . " " . $user['lastname'] ?></h4>
-                    <div class="flex flex-col items-center space-y-4 justify-center h-[300px] md:h-[1000px]">
-                        <a href="./profil.php">Voir profil</a>
-                        <form class="flex flex-col items-center space-y-4" action="../process/handleLogout.php" method="post">
-                            <input class="bg-green text-primary-white rounded-lg p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark" type="submit" value="Se déconnecter">
+                            </form>
 
-                        </form>
-                        <i id="closeConnected" class="absolute top-1 right-1 md:top-2 md:right-2 text-primary-dark hover:text-primary-white focus:outline-none font-bold bx bx-x text-3xl md:text-5xl cursor-pointer"></i>
 
+                        </div>
                     </div>
-                </article>
-            </div>
+                </div>
+
+            </article>
+
         </section>
 
 

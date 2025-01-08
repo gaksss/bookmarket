@@ -4,7 +4,7 @@ profil.addEventListener("click", handleOpenProfile);
 
 function handleOpenProfile(event) {
   const connexion = document.querySelector("#connexion");
-  const modalOverlay = document.querySelector("#modal");
+  const modalOverlay = document.querySelector("#modalConnexion");
 
   modalOverlay.classList.remove("hidden");
   connexion.classList.remove("hidden");
