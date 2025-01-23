@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../db/dbConnect.php';
+require_once("../utils/db/dbConnect.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
     // Récupérer les données du formulaire

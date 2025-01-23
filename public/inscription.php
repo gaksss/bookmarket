@@ -12,7 +12,7 @@
 <body>
     <header class=" bg-primary-dark h-16 font-extrabold sticky top-0 z-20 flex items-center px-6 justify-center w-full md:px-12 md:h-24">
 
-        <a href="./accueil.php" class="flex items-center"><img src="../assets/img/logo.png" alt="Logo de la marque représentant la Terre sur un livre" class="h-12 w-12 md:h-20 md:w-20 filter brightness-200 ">
+        <a href="./accueil.php" class="flex items-center"><img src="./assets/img/logo.png" alt="Logo de la marque représentant la Terre sur un livre" class="h-12 w-12 md:h-20 md:w-20 filter brightness-200 ">
             <h1 class="text-4xl text-primary-white hidden md:flex">BookMarket</h1>
         </a>
 

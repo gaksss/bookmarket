@@ -1,47 +1,26 @@
 <?php
-include_once("../db/dbConnect.php");
+require_once("../utils/db/dbConnect.php");
+include_once("../utils/autoloader.php");
 
-// recupe des datas
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// QUERY
-$stmt = $pdo->prepare('SELECT * FROM user WHERE email = :email');
-$stmt->execute([
-    ':email' => $email,
-]);
+$userRepository = new UserRepository();
+$user = $userRepository->findByEmail($email);
 
-// RESULT QUERY
-$user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-
-
-// if user exist is not empty
-if (empty($user)) {
-    header('location: ./pages/accueil.php');
+if ($user === null || !password_verify($password, $user->getPassword())) {
+    header('location: ../public/accueil.php');
     exit;
-};
-
-// if password enter and the password(hashed) stock in DB are equal
-
-if (!password_verify($password, $user['password'])) {
-    var_dump("test");
-    header('location: ./pages/accueil.php');
-    exit;
-};
+}
 
 session_start();
 
-// envoye en backend par session
 $_SESSION['user'] = [
-    "lastname" => $user["lastname"],
-    "firstname" => $user["firstname"],
-    "phone" => $user["phone"],
-    "email" => $user["email"],
-    "id" => $user["id"],
-
+    "lastname" => $user->getLastname(),
+    "firstname" => $user->getFirstname(),
+    "phone" => $user->getPhone(),
+    "email" => $user->getEmail(),
+    "id" => $user->getId(),
 ];
 
-// redirect to home page if user exist
-
-header('location: ../pages/accueil.php');
+header('location: ../public/accueil.php');

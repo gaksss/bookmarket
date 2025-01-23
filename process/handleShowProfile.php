@@ -3,12 +3,12 @@ session_start();
 
 if (!isset($_SESSION['user'])) {
     // Redirigez vers l'accueil si l'utilisateur n'est pas connecté
-    header('Location: ../pages/accueil.php');
+    header('Location: ../public/accueil.php');
     exit;
 }
 
 $email = $_SESSION['user']['email'];
-require_once '../db/dbConnect.php';
+require_once("../utils/db/dbConnect.php");
 
 $sql = "SELECT * FROM `user` WHERE email = :email";
 

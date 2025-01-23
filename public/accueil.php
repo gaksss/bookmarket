@@ -20,7 +20,7 @@ $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilis
 <body class="bg-primary-white">
 
     <header class=" bg-primary-dark h-16 font-extrabold sticky top-0 z-20 flex items-center px-6 justify-between w-full md:px-12 md:h-24">
-        <a href="#" class="flex items-center"><img src="../assets/img/logo.png" alt="Logo de la marque représentant la Terre sur un livre" class="h-12 w-12 md:h-20 md:w-20 filter brightness-200 ">
+        <a href="#" class="flex items-center"><img src="./assets/img/logo.png" alt="Logo de la marque représentant la Terre sur un livre" class="h-12 w-12 md:h-20 md:w-20 filter brightness-200 ">
             <h1 class="text-4xl text-primary-white hidden md:flex">BookMarket</h1>
         </a>
 
@@ -35,11 +35,11 @@ $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilis
             if (isset($_SESSION['user'])) {
                 $user = $_SESSION['user'];
             ?>
-                <script src="../js/openProfileConnected.js"></script>
+                <script src="./assets/js/openProfileConnected.js"></script>
             <?php
             } else {
             ?>
-                <script src="../js/openProfile.js"></script>
+                <script src="./assets/js/openProfile.js"></script>
             <?php
             }
             ?>
@@ -62,7 +62,7 @@ $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilis
                                 <input class="md:w-[300px] md:h-[30px] px-3" type="password" name="password" id="password" placeholder="Votre mot de passe">
                                 <input type="submit" value="Se connecter" class="bg-green text-primary-white rounded-lg p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark">
                             </form>
-                            <a class="bg-green text-primary-white rounded-lg p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark" href="../pages/inscription.php">Pas encore inscrit?</a>
+                            <a class="bg-green text-primary-white rounded-lg p-2 cursor-pointer hover:bg-primary-white hover:text-primary-dark" href="./inscription.php">Pas encore inscrit?</a>
                             <i id="close" class="absolute top-1 right-1 md:top-2 md:right-2 text-primary-dark hover:text-primary-white focus:outline-none font-bold bx bx-x text-3xl md:text-5xl cursor-pointer"></i>
                         </div>
                     </div>

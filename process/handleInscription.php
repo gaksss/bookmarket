@@ -1,10 +1,10 @@
 <?php
-include_once("../db/dbConnect.php");
+require_once("../utils/db/dbConnect.php");
 
 
 // Regarde que le server soit bien en mode post
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('location: ../pages/accueil.php');
+    header('location: ../public/accueil.php');
     return;
 }
 
@@ -21,7 +21,7 @@ if (
         $_POST['firstname'],
     )
 ) {
-    header('location: ../pages/accueil.php');
+    header('location: ../public/accueil.php');
     return;
 }
 
@@ -36,7 +36,7 @@ if (
     empty($_POST['lastname']) ||
     empty($_POST['firstname'])
 ) {
-    header('location: ../pages/accueil.php');
+    header('location: ../public/accueil.php');
     return;
 }
 
@@ -61,7 +61,7 @@ if (
     strlen($firstname) > 50
 ) {
     // redirection si c'est pas bon
-    header('location: ../pages/accueil.php');
+    header('location: ../public/accueil.php');
     return;
 }
 
@@ -69,7 +69,7 @@ if (
 if (
     $email != $confirmEmail || $password != $confirmPassword
 ) {
-    header('location: ../pages/accueil.php');
+    header('location: ../public/accueil.php');
     return;
 }
 
@@ -77,7 +77,7 @@ if (
 
 // Regarde en regex si l'email est bien conforme
 if (!preg_match('/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]/', $email)) {
-    header('location: ../pages/accueil.php');
+    header('location: ../public/accueil.php');
     return;
 }
 
@@ -102,7 +102,7 @@ try {
     ]);
 } catch (PDOException $error) {
     echo "Erreur lors de la requete : ";
-    header('location: ../pages/accueil.php');
+    header('location: ../public/accueil.php');
 }
 
-header('location: ../pages/accueil.php');
+header('location: ../public/accueil.php');
