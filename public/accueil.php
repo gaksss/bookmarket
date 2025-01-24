@@ -11,7 +11,7 @@ $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilis
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookMarket</title>
-    <link rel="stylesheet" href="../assets/styles/output.css">
+    <link rel="stylesheet" href="./assets/styles/output.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
@@ -51,8 +51,8 @@ $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilis
 
         <section>
             <article class="hidden" id="connexion">
-                <div id="modalConnexion" class="fixed hidden inset-0 bg-primary-dark bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="bg-red rounded-lg shadow-lg w-[300px] h-[400px] p-6 relative flex flex-col md:w-[1000px] md:h-[1000px]">
+                <div id="modalConnexion" class="fixed inset-0 bg-primary-dark bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="bg-red rounded-lg shadow-lg w-[300px] h-[400px] p-6 relative flex flex-col md:w-[800px] md:h-[800px]">
                         <h4 class="text-md font-bold mb-4 md:text-lg text-primary-white">Vous n'êtes pas connecté</h4>
                         <div class="flex flex-col items-center space-y-4 justify-center h-[300px] md:h-[1000px]">
                             <form class="flex flex-col items-center space-y-4" action="../process/handleConnect.php" method="post">
@@ -69,7 +69,7 @@ $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilis
                 </div>
             </article>
             <article class="hidden" id="connected">
-                <div id="modalConnected" class="fixed hidden  inset-0 bg-primary-dark bg-opacity-50 flex justify-end items-center z-50">
+                <div id="modalConnected" class="fixed inset-0 bg-primary-dark bg-opacity-50 flex justify-end items-center z-50">
                     <div class="bg-red shadow-lg w-[300px] h-[100vh] py-6 relative flex flex-col md:w-[300px] md:h-[100vh]">
                         <h4 class="text-md px-6 font-bold mb-4 md:text-xl text-primary-white">Vous êtes connecté bienvenue <?php echo $user['firstname'] . " " . $user['lastname'] ?></h4>
                         <div class="flex flex-col items-start space-y-4 justify-start h-[300px] md:h-[1000px]">

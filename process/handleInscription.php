@@ -1,13 +1,13 @@
 <?php
-require_once("../utils/db/dbConnect.php");
 
+require_once("../utils/db/dbConnect.php");
+require_once("../utils/autoloader.php");
 
 // Regarde que le server soit bien en mode post
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('location: ../public/accueil.php');
     return;
 }
-
 
 // Regarde que tout les inputs existent bien
 if (
@@ -18,13 +18,12 @@ if (
         $_POST['confirmPassword'],
         $_POST['phone'],
         $_POST['lastname'],
-        $_POST['firstname'],
+        $_POST['firstname']
     )
 ) {
     header('location: ../public/accueil.php');
     return;
 }
-
 
 // Regarde que les inputs ne soient pas vides
 if (
@@ -49,7 +48,6 @@ $phone = htmlspecialchars(trim($_POST['phone']));
 $lastname = htmlspecialchars(trim($_POST['lastname']));
 $firstname = htmlspecialchars(trim($_POST['firstname']));
 
-
 // Regarde que les inputs ne soient pas trop longs
 if (
     strlen($email) > 50 ||
@@ -60,20 +58,15 @@ if (
     strlen($lastname) > 50 ||
     strlen($firstname) > 50
 ) {
-    // redirection si c'est pas bon
     header('location: ../public/accueil.php');
     return;
 }
 
-//  Si des champs sont différents
-if (
-    $email != $confirmEmail || $password != $confirmPassword
-) {
+// Si des champs sont différents
+if ($email != $confirmEmail || $password != $confirmPassword) {
     header('location: ../public/accueil.php');
     return;
 }
-
-
 
 // Regarde en regex si l'email est bien conforme
 if (!preg_match('/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]/', $email)) {
@@ -81,28 +74,13 @@ if (!preg_match('/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]/', $email)) {
     return;
 }
 
-
-
-// Inserer user info dans la BDD
-
-
-$sql = $sql = "INSERT INTO user (lastname, firstname, email, phone, password)
-VALUES (:lastname,:firstname, :email, :phone, :password);";
-
 try {
-    $hashedPassword = password_hash($_POST["password"], PASSWORD_DEFAULT);
-
-    $stmt = $pdo->prepare($sql);
-    $users = $stmt->execute([
-        ':email' => $_POST["email"],
-        ':password' => $hashedPassword,
-        ':lastname' => $_POST["lastname"],
-        ':firstname' => $_POST["firstname"],
-        ':phone' => $_POST["phone"]
-    ]);
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    $user = new User(0, $lastname, $firstname, $email, $phone, $hashedPassword, '', 1); // Assuming default role id is 1
+    $userRepository = new UserRepository();
+    $userRepository->createUser($user);
+    header('location: ../public/accueil.php');
 } catch (PDOException $error) {
-    echo "Erreur lors de la requete : ";
+    echo "Erreur lors de la requête : " . $error->getMessage();
     header('location: ../public/accueil.php');
 }
-
-header('location: ../public/accueil.php');

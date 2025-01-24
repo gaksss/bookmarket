@@ -288,7 +288,7 @@
   
   "scripts": {
   
-    "build:css": "tailwindcss build -i ./assets/styles/style.css -o ./assets/styles/output.css --watch"
+    "build:css": "tailwindcss build -i ./public/assets/styles/style.css -o ./public/assets/styles/output.css --watch"
   
   
   },

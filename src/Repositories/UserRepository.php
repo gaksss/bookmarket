@@ -21,10 +21,19 @@ final class UserRepository extends AbstractRepository
         return UserMapper::mapToObject($userData);
     }
 
-    public function createUser()
+    public function createUser(User $user): void
     {
+        $sql = "INSERT INTO user (lastname, firstname, email, phone, password)
+            VALUES (:lastname, :firstname, :email, :phone, :password )";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':lastname' => $user->getLastname(),
+            ':firstname' => $user->getFirstname(),
+            ':email' => $user->getEmail(),
+            ':phone' => $user->getPhone(),
+            ':password' => $user->getPassword(),
 
-   
+        ]);
     }
 
 
@@ -34,5 +43,26 @@ final class UserRepository extends AbstractRepository
         $sql = "DELETE FROM `user` WHERE `email` = :email";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute(['email' => $email]);
+    }
+
+
+    public function updateUser(User $user): void
+    {
+        $sql = "UPDATE user 
+                SET lastname = :lastname, 
+                    firstname = :firstname, 
+                    email = :email, 
+                    phone = :phone, 
+                    password = :password
+                WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':lastname' => $user->getLastname(),
+            ':firstname' => $user->getFirstname(),
+            ':email' => $user->getEmail(),
+            ':phone' => $user->getPhone(),
+            ':password' => $user->getPassword(),
+            ':id' => $user->getId()
+        ]);
     }
 }

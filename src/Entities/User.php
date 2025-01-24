@@ -14,7 +14,7 @@ final class User
 
 
 
-    public function __construct(int $id, string $lastname, string $firstname, string $email, string $phone, string $password, string $pp_path, int $id_role)
+    public function __construct(int $id, string $lastname, string $firstname, string $email, string $phone, string $password)
     {
         $this->id = $id;
         $this->lastname = $lastname;
@@ -22,8 +22,7 @@ final class User
         $this->email = $email;
         $this->phone = $phone;
         $this->password = $password;
-        $this->pp_path = $pp_path;
-        $this->id_role = $id_role;
+        
     }
 
 
@@ -75,5 +74,81 @@ final class User
     public function getPassword()
     {
         return $this->password;
+    }
+
+   
+
+    
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of lastname
+     *
+     * @return  self
+     */ 
+    public function setLastname($lastname)
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of firstname
+     *
+     * @return  self
+     */ 
+    public function setFirstname($firstname)
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+        /**
+         * Set the value of email
+         *
+         * @return  self
+         */ 
+        public function setEmail($email)
+        {
+                $this->email = $email;
+
+                return $this;
+        }
+
+        /**
+         * Set the value of phone
+         *
+         * @return  self
+         */ 
+        public function setPhone($phone)
+        {
+                $this->phone = $phone;
+
+                return $this;
+        }
+
+    /**
+     * Set the value of password
+     *
+     * @return  self
+     */ 
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
     }
 }

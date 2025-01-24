@@ -13,8 +13,7 @@ class UserMapper
             $datas['email'],
             $datas['phone'],
             $datas['password'],
-            $datas['pp_path'],
-            $datas['id_role']
+
         );
     }
 
@@ -28,6 +27,7 @@ class UserMapper
             'email' => $user->getEmail(),
             'phone' => $user->getPhone(),
             'password' => $user->getPassword(),
+
 
 
         ];

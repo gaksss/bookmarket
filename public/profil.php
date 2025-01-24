@@ -13,7 +13,7 @@ include_once '../process/handleDeleteProfile.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookMarket</title>
-    <link rel="stylesheet" href="../assets/styles/output.css">
+    <link rel="stylesheet" href="./assets/styles/output.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -34,39 +34,49 @@ include_once '../process/handleDeleteProfile.php';
         <h3 class="text-4xl mt-6 mb-14">Voulez vous modifier vos informations?</h3>
 
 
-        <form action="../process/handleModifyProfile.php" method="post">
+        <form action="../process/handleModifyProfile.php" method="post" class="max-w-4xl mx-auto bg-gray-50 p-6 rounded-lg shadow-md">
             <input type="hidden" name="idPatient" value="<?= htmlspecialchars($user['id']) ?>">
             <input type="hidden" name="update" value="1"> <!-- Indicateur de mise à jour -->
 
-            <div class="flex items-center gap-4 text-3xl mb-6">
-                <label class="font-semibold" for="lastname">Nom :</label>
-                <input class="bg-green rounded-md py-4 px-2 border-2" type="text" name="lastname" id="lastname" value="<?= htmlspecialchars($user['lastname']) ?>">
+            <div class="flex items-center gap-4 mb-6">
+                <label class="font-semibold text-3xl w-1/3 text-right" for="lastname">Nom :</label>
+                <input class="flex-1 bg-green rounded-md py-4 px-2 border-2 border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none text-3xl"
+                    type="text" name="lastname" id="lastname" value="<?= htmlspecialchars($user['lastname']) ?>">
             </div>
 
-            <div class="flex items-center gap-4 text-3xl mb-6">
-                <label class="font-semibold" for="firstname">Prénom :</label>
-                <input class="bg-green rounded-md py-4 px-2 border-2" type="text" name="firstname" id="firstname" value="<?= htmlspecialchars($user['firstname']) ?>">
+            <div class="flex items-center gap-4 mb-6">
+                <label class="font-semibold text-3xl w-1/3 text-right" for="firstname">Prénom :</label>
+                <input class="flex-1 bg-green rounded-md py-4 px-2 border-2 border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none text-3xl"
+                    type="text" name="firstname" id="firstname" value="<?= htmlspecialchars($user['firstname']) ?>">
             </div>
 
-            <div class="flex items-center gap-4 text-3xl mb-6">
-                <label class="font-semibold" for="password">Mot de passe :</label>
-                <input class="bg-green rounded-md py-4 px-2 border-2" type="password" name="password" id="password" value="<?= htmlspecialchars($user['password']) ?>">
+            <div class="flex items-center gap-4 mb-6">
+                <label class="font-semibold text-3xl w-1/3 text-right" for="password">Mot de passe :</label>
+                <input class="flex-1 bg-green rounded-md py-4 px-2 border-2 border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none text-3xl"
+                    type="password" name="password" id="password" value="<?= htmlspecialchars($user['password']) ?>">
             </div>
 
-            <div class="flex items-center gap-4 text-3xl mb-6">
-                <label class="font-semibold" for="phone">Numéro de téléphone :</label>
-                <input class="bg-green rounded-md py-4 px-2 border-2" type="text" name="phone" id="phone" maxlength="10" value="<?= htmlspecialchars($user['phone']) ?>" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+            <div class="flex items-center gap-4 mb-6">
+                <label class="font-semibold text-3xl w-1/3 text-right" for="phone">Numéro de téléphone :</label>
+                <input class="flex-1 bg-green rounded-md py-4 px-2 border-2 border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none text-3xl"
+                    type="text" name="phone" id="phone" maxlength="10"
+                    value="<?= htmlspecialchars($user['phone']) ?>"
+                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
             </div>
 
-            <div class="flex items-center gap-4 text-3xl mb-6">
-                <label class="font-semibold" for="email">Email :</label>
-                <input class="bg-green rounded-md py-4 px-2 border-2 w-[500px]" type="text" name="email" id="email" value="<?= htmlspecialchars($user['email']) ?>">
+            <div class="flex items-center gap-4 mb-6">
+                <label class="font-semibold text-3xl w-1/3 text-right" for="email">Email :</label>
+                <input class="flex-1 bg-green rounded-md py-4 px-2 border-2 border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none text-3xl"
+                    type="text" name="email" id="email" value="<?= htmlspecialchars($user['email']) ?>">
             </div>
 
-            <div class="flex justify-self-center items-center gap-4 text-3xl mb-6">
-                <button class="bg-green rounded-md py-4 px-2 border-2 hover:bg-primary-dark hover:text-primary-white" type="submit">Modifier</button>
+            <div class="flex justify-center">
+                <button class="bg-green rounded-md py-4 px-6 text-3xl font-semibold border-2 hover:bg-primary-dark hover:text-primary-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                    type="submit">Modifier</button>
             </div>
         </form>
+
+
 
         <form action="../process/handleDeleteProfile.php" method="post">
             <input type="hidden" name="email" value="<?php echo $user['email']; ?>">
