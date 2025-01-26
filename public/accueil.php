@@ -1,7 +1,14 @@
 <?php
+include_once "../utils/autoloader.php";
+
 
 session_start();
 $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilisée dans votre session pour stocker l'utilisateur connecté
+
+$booksRepository = new BookRepository();
+$books = $booksRepository->findAllBooks();
+
+
 
 ?>
 <!DOCTYPE html>
@@ -26,9 +33,9 @@ $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilis
 
         <nav class="flex justify-evenly w-[150px] md:w-[250px] lg:w-[300px]">
 
-            <a href="#" id="cart"><i class='bx bx-cart text-4xl text-primary-white md:text-6xl'></i></a>
-            <a href="#" id="search"><i class='bx bx-search-alt-2 text-4xl text-primary-white md:text-6xl'></i></a>
-            <a href="#" id="profil"><i class='bx bx-user text-4xl text-primary-white md:text-6xl'></i></a>
+            <a href="#" id="cart"><i class='bx bx-cart text-4xl text-primary-white md:text-4xl'></i></a>
+            <a href="#" id="search"><i class='bx bx-search-alt-2 text-4xl text-primary-white md:text-4xl'></i></a>
+            <a href="#" id="profil"><i class='bx bx-user text-4xl text-primary-white md:text-4xl'></i></a>
 
 
             <?php
@@ -152,99 +159,33 @@ $isUserConnected = isset($_SESSION['user']); // Adaptez 'user' à la clé utilis
 
 
         </section>
-        <section class="bg-primary-dark flex flex-col items-center mt-36 pb-16">
+        <section id="new" class="bg-primary-dark flex flex-col items-center mt-36 pb-16">
             <h2 class="text-4xl md:text-6xl lg:text-7xl font-semibold mt-6 mb-24 text-primary-white">Nouveautés</h2>
             <article class="grid grid-cols-2 gap-10 md:grid-cols-3 items-center justify-center md:gap-24">
-                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                <?php
 
-                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-                    </div>
-                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                    </div>
-                </div>
-                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                foreach ($books as $book):
 
-                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-                    </div>
-                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                    </div>
-                </div>
-                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                ?>
 
-                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-                    </div>
-                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                    </div>
-                </div>
-                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
 
-                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-                    </div>
-                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                    </div>
-                </div>
-                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
+                    <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
 
-                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                        <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
+                            <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
+                        </div>
+                        <div class="pb-2 px-2 lg:pb-5 lg:px-5">
+                            <h3 class="text-xl lg:text-3xl lg:mb-2"><?= $book->getTitle() ?></h3>
+                            <p class="text-sm max-sm:truncate truncate"><?= $book->getDescription() ?></p>
+                        </div>
                     </div>
-                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                    </div>
-                </div>
-                <div class="bg-green w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white flex flex-col justify-end ">
 
-                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-                    </div>
-                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                    </div>
-                </div>
-                <div class="bg-green hidden w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white md:flex flex-col justify-end ">
 
-                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-                    </div>
-                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                    </div>
-                </div>
-                <div class="bg-green hidden w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white md:flex flex-col justify-end ">
 
-                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-                    </div>
-                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                    </div>
-                </div>
-                <div class="bg-green hidden w-[150px] h-[250px] lg:h-[400px] lg:w-[300px] text-primary-white md:flex flex-col justify-end ">
+                <?php
+                endforeach;
 
-                    <div id="imageHolder" class="bg-primary-white h-[200px] w-[150px] lg:w-[300px] lg:h-[400px]">
-                        <p class="bg-red w-[40%] lg:w-[20%] px-2 rounded-br-sm">Genre</p>
-                    </div>
-                    <div class="pb-2 px-2 lg:pb-5 lg:px-5">
-                        <h3 class="text-xl lg:text-3xl lg:mb-2">Titre</h3>
-                        <p class="text-sm max-sm:truncate md:">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laudantium.</p>
-                    </div>
-                </div>
+                ?>
             </article>
         </section>
         <footer>
