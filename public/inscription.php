@@ -35,20 +35,20 @@
 
                     <div class="flex flex-col ">
                         <label for="confirmEmail">Confirmer email: </label>
-                        <input class="text-primary-dark bg-primary-white] rounded-lg py-2 y-" type="text" name="confirmEmail" id="confirmEmail">
+                        <input class="text-primary-dark bg-primary-white rounded-lg py-2 y-" type="text" name="confirmEmail" id="confirmEmail">
                     </div>
                     <div class="flex flex-col ">
                         <label for="lastname">Nom de famille: </label>
-                        <input class="text-primary-dark bg-primary-white] rounded-lg py-2 y-" type="text" name="lastname" id="lastname">
+                        <input class="text-primary-dark bg-primary-white rounded-lg py-2 y-" type="text" name="lastname" id="lastname">
                     </div>
                     <div class="flex flex-col ">
                         <label for="firstname">Prénom: </label>
-                        <input class="text-primary-dark bg-primary-white] rounded-lg py-2 y-" type="text" name="firstname" id="firstname">
+                        <input class="text-primary-dark bg-primary-white rounded-lg py-2 y-" type="text" name="firstname" id="firstname">
                     </div>
 
                     <div class="flex flex-col ">
                         <label for="password">Votre mot de passe: </label>
-                        <input class="text-primary-dark bg-primary-white] rounded-lg py-2" type="password" name="password" id="password">
+                        <input class="text-primary-dark bg-primary-white rounded-lg py-2" type="password" name="password" id="password">
                     </div>
 
                     <div class="flex flex-col">

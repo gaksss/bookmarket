@@ -9,7 +9,11 @@ module.exports = {
       green: "#538083",
       red: "#B75D69",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'books-pile': "url('../img/booksPile.jpeg')",
+      }
+    },
   },
   plugins: [],
 };
