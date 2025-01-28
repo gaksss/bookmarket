@@ -18,6 +18,7 @@ $books = $booksRepository->findAllBooks();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookMarket</title>
+    <script type="module" src="./assets/js/swiper.js"></script>
     <link rel="stylesheet" href="./assets/styles/output.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -55,6 +56,21 @@ $books = $booksRepository->findAllBooks();
         </nav>
     </header>
     <main>
+
+        <swiper-container class="mySwiper" navigation="true">
+            <swiper-slide class="red">Slide 1</swiper-slide>
+            <swiper-slide class="blue">Slide 2</swiper-slide>
+            <swiper-slide class="red">Slide 3</swiper-slide>
+            <swiper-slide class="blue">Slide 4</swiper-slide>
+            <swiper-slide class="red">Slide 5</swiper-slide>
+            <swiper-slide class="blue">Slide 6</swiper-slide>
+            <swiper-slide class="red">Slide 7</swiper-slide>
+            <swiper-slide class="blue">Slide 8</swiper-slide>
+            <swiper-slide class="red">Slide 9</swiper-slide>
+        </swiper-container>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
 
         <section>
             <article class="hidden" id="connexion">
@@ -157,6 +173,7 @@ $books = $booksRepository->findAllBooks();
                 ?>
             </article>
         </section>
+
         <footer>
             <section class="bg-primary-white flex flex-col items-center mt-20 pb-16">
                 <article id="links" class="grid grid-cols-3 gap-5 md:gap-0 justify-between w-[70%]">

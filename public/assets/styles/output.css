@@ -574,12 +574,12 @@ video {
   inset: 0px;
 }
 
-.inset-10 {
-  inset: 2.5rem;
-}
-
 .left-0 {
   left: 0px;
+}
+
+.left-2 {
+  left: 0.5rem;
 }
 
 .right-0 {
@@ -588,6 +588,10 @@ video {
 
 .right-1 {
   right: 0.25rem;
+}
+
+.right-2 {
+  right: 0.5rem;
 }
 
 .top-0 {
@@ -602,40 +606,8 @@ video {
   top: 50%;
 }
 
-.top-10 {
-  top: 2.5rem;
-}
-
 .top-24 {
   top: 6rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
-.top-40 {
-  top: 10rem;
-}
-
-.top-52 {
-  top: 13rem;
-}
-
-.top-48 {
-  top: 12rem;
-}
-
-.top-32 {
-  top: 8rem;
-}
-
-.top-3 {
-  top: 0.75rem;
-}
-
-.top-36 {
-  top: 9rem;
 }
 
 .z-10 {
@@ -648,10 +620,6 @@ video {
 
 .z-50 {
   z-index: 50;
-}
-
-.z-40 {
-  z-index: 40;
 }
 
 .mx-auto {
@@ -693,10 +661,6 @@ video {
 
 .mt-20 {
   margin-top: 5rem;
-}
-
-.mt-36 {
-  margin-top: 9rem;
 }
 
 .mt-6 {
@@ -743,10 +707,6 @@ video {
   height: 400px;
 }
 
-.h-\[\] {
-  height: ;
-}
-
 .h-\[90vh\] {
   height: 90vh;
 }
@@ -789,6 +749,11 @@ video {
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -870,10 +835,6 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.self-center {
-  align-self: center;
-}
-
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -935,10 +896,6 @@ video {
   --tw-bg-opacity: 0.8;
 }
 
-.bg-opacity-25 {
-  --tw-bg-opacity: 0.25;
-}
-
 .bg-books-pile {
   background-image: url('../img/booksPile.jpeg');
 }
@@ -953,6 +910,10 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-6 {
@@ -1004,11 +965,6 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.px-36 {
-  padding-left: 9rem;
-  padding-right: 9rem;
-}
-
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -1017,24 +973,8 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pt-36 {
-  padding-top: 9rem;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem;
-}
-
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pt-48 {
-  padding-top: 12rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
 }
 
 .text-center {
@@ -1043,6 +983,11 @@ video {
 
 .text-right {
   text-align: right;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl {
@@ -1100,16 +1045,6 @@ video {
 .text-primary-white {
   --tw-text-opacity: 1;
   color: rgb(240 237 238 / var(--tw-text-opacity, 1));
-}
-
-.text-green {
-  --tw-text-opacity: 1;
-  color: rgb(83 128 131 / var(--tw-text-opacity, 1));
-}
-
-.text-red {
-  --tw-text-opacity: 1;
-  color: rgb(183 93 105 / var(--tw-text-opacity, 1));
 }
 
 .underline {

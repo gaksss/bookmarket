@@ -258,6 +258,9 @@
   "supports-preserve-symlinks-flag": "^1.0.0",
   
     
+  "swiper": "^11.2.1",
+  
+    
   "thenify": "^3.3.1",
   
     
@@ -288,8 +291,8 @@
   
   "scripts": {
   
-    "build:css": "tailwindcss build -i ./public/assets/styles/style.css -o ./public/assets/styles/output.css --watch"
-  
+    
+  "build:css": "tailwindcss build -i ./public/assets/styles/style.css -o ./public/assets/styles/output.css --watch"
   
   },
   
