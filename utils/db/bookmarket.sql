@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 07 jan. 2025 à 11:31
+-- Généré le : mar. 28 jan. 2025 à 12:37
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `book` (
   PRIMARY KEY (`id`),
   KEY `book_id_img_foreign` (`id_img`(250)),
   KEY `book_id_seller_foreign` (`id_seller`),
-  FOREIGN KEY (`id_author`) REFERENCES `author`(`id`),
+  KEY `id_author` (`id_author`),
   KEY `book_id_bookstate_foreign` (`id_bookState`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -75,11 +75,11 @@ CREATE TABLE IF NOT EXISTS `book` (
 --
 
 INSERT INTO `book` (`id`, `title`, `id_author`, `price`, `description`, `id_img`, `releaseAt`, `id_seller`, `id_bookState`) VALUES
-(1, 'Yoga', 1, 0, '', '1', '0000-00-00', 0, 1),
-(2, 'Histoire de la nuit', 2, 0, '', '2', '0000-00-00', 0, 1),
-(3, 'Par instants, la vie n’est pas sûre', 3, 0, '', '3', '0000-00-00', 0, 1),
-(4, 'Saturne', 4, 0, '', '4', '0000-00-00', 0, 1),
-(5, 'Comédies françaises', 5, 0, '', '5', '0000-00-00', 0, 1);
+(1, 'Yoga', 1, 0, 'C’est l’histoire d’un livre sur le yoga et la dépression. La méditation et le terrorisme. L’aspiration à l’unité et le trouble bipolaire. Des choses qui n’ont pas l’air d’aller ensemble, et pourtant : elles vont ensemble.', '1', '0000-00-00', 0, 1),
+(2, 'Histoire de la nuit', 2, 0, 'Il ne reste presque plus rien à La Bassée : un bourg et quelques hameaux, dont celui qu’occupent Bergogne, sa femme Marion et leur fille Ida, ainsi qu’une voisine, Christine, une artiste installée ici depuis des années.\r\nOn s’active, on se prépare pour l’', '2', '0000-00-00', 0, 1),
+(3, 'Par instants, la vie n’est pas sûre', 3, 0, '« Si j’ai choisi de t’écrire Pierre, c’est que j’ai préféré m’adresser à toi plutôt que de parler de toi. Il m’a semblé ainsi réduire, effacer même par instants, la distance qui sépare la vie de la mort. »\r\n\r\nIl y eut une rencontre décisive dans la vie de', '3', '0000-00-00', 0, 1),
+(4, 'Saturne', 4, 0, 'Automne 1977 : Harry, trente-quatre ans, meurt dans des circonstances tragiques, laissant derrière lui sa fille de quinze mois.\r\nAvril 2019 : celle-ci rencontre une femme qui a connu Harry enfant, pendant la guerre d’Algérie.\r\nSe déploie alors le roman de', '4', '0000-00-00', 0, 1),
+(5, 'Comédies françaises', 5, 0, 'Fasciné par les arcanes du réel, Dimitri, jeune reporter de vingt-sept ans, mène sa vie comme ses missions : en permanence à la recherche de rencontres et d’instants qu’il voudrait décisifs.\r\nUn jour, il se lance dans une enquête sur la naissance d’Intern', '5', '0000-00-00', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -254,7 +254,24 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_email_unique` (`email`),
   KEY `user_id_role_foreign` (`id_role`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `lastname`, `firstname`, `email`, `phone`, `password`, `pp_path`, `id_role`) VALUES
+(2, 'test', 'test', 'test@gmail.com', 'test', '$2y$10$reDnClOIlokliU1qd/l.JuiZNBdYhei7J1VOi91JY4TmQjrXXnNXq', '', 0);
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `book`
+--
+ALTER TABLE `book`
+  ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`id_author`) REFERENCES `author` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
